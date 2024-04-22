@@ -17,8 +17,3 @@ def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
     """
     return [(i, len(i)) for i in lst]
 
-if __name__ == "__main__":
-    # Example usage
-    lst = ["hello", "world", "python"]
-    result = element_length(lst)
-    print(result)

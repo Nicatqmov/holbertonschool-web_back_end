@@ -1,18 +1,16 @@
 #!/usr/bin/env python3
-'''Python function that insert school in a collection
-'''
-
+"""
+    Python function that returns the list of school having a specific topic
+"""
 from pymongo import MongoClient
 
-
 def schools_by_topic(mongo_collection, topic):
-        """
-    Insert a new document in a collection based on kwargs.
+    """
+    Returns the list of schools having a specific topic.
 
     :param mongo_collection: The pymongo collection object
-    :param kwargs: The fields and values to insert in the new document
-    :return: The new _id of the inserted document
+    :param topic: The topic to search for
+    :return: List of schools matching the specified topic
     """
-    schools = mongo_collection.find({'topics' : topic})
-
+    schools = mongo_collection.find({"topics": topic})
     return schools

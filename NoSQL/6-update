@@ -1,0 +1,8 @@
+// update
+db.school.update(
+    {'name' : 'Holberton school'},
+    {'$set': {"new_attribute":"attribute_value"}},
+    false,
+    true
+    )
+

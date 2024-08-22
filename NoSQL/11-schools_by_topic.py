@@ -13,6 +13,6 @@ def schools_by_topic(mongo_collection, topic):
     :param kwargs: The fields and values to insert in the new document
     :return: The new _id of the inserted document
     """
-    schools = mongo_collection.find('topic' : topic)
+    schools = mongo_collection.find({'topics' : topic})
 
     return schools
